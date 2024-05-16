@@ -76,7 +76,7 @@ function Meneu() {
 function Footer() {
   const Hour = new Date().getHours();
   const openHour = 10;
-  const CloseHour = 11;
+  const CloseHour = 22;
   const isOpen = Hour < CloseHour && Hour > openHour;
   return (
     <footer className="footer">
@@ -89,10 +89,12 @@ function Footer() {
   );
 }
 function Order({ CloseHour }) {
-  <div>
-    <p>We are Open untill {CloseHour}:00. Come or Order Online</p>
-    <button className="btn order">Order Now</button>
-  </div>;
+  return (
+    <div>
+      <p>We are Open untill {CloseHour}:00. Come or Order Online</p>
+      <button className="btn order">Order Now</button>
+    </div>
+  );
 }
 function Pizza({ ob }) {
   return (
